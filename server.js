@@ -45,6 +45,14 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+    welcomeMessage: 'Welcome! Now the time is ' + new Date().getHours() + '.' + new Date().getMinutes() + '.' + new Date().getSeconds()
+
+  });
+});
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
